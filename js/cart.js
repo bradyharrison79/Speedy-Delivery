@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const currentUser = localStorage.getItem("currentUser");
+  const currentUser = localStorage.getItem("loggedInUser");
   const cartKey = `cart_${currentUser}`;
   const cartItems = JSON.parse(localStorage.getItem(cartKey)) || [];
 

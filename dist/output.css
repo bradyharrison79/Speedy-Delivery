@@ -1,0 +1,37 @@
+/* Tailwind Minimal Utility Output - Placeholder */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+  }
+  .bg-blue-900 { background-color: #1e3a8a; }
+  .text-white { color: #ffffff; }
+  .text-gray-800 { color: #1f2937; }
+  .text-gray-600 { color: #4b5563; }
+  .shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .rounded { border-radius: 0.25rem; }
+  .rounded-full { border-radius: 9999px; }
+  .flex { display: flex; }
+  .items-center { align-items: center; }
+  .justify-between { justify-content: space-between; }
+  .space-x-4 > :not(:last-child) { margin-right: 1rem; }
+  .max-w-7xl { max-width: 80rem; margin: 0 auto; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  .px-4 { padding-left: 1rem; padding-right: 1rem; }
+  .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+  .font-bold { font-weight: 700; }
+  .hover\:text-black:hover { color: #000000; }
+  .relative { position: relative; }
+  .absolute { position: absolute; }
+  .-top-2 { top: -0.5rem; }
+  .-right-3 { right: -0.75rem; }
+  .bg-red-600 { background-color: #dc2626; }
+  .text-xs { font-size: 0.75rem; line-height: 1rem; }
+  .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+  

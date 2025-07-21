@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = "bg-white rounded shadow p-4 flex flex-col justify-between h-full";
 
     card.innerHTML = `
-      <img src="${imagePath}" alt="${item.name}" class="w-full aspect-video object-cover rounded mb-3" onerror="this.src='../images/placeholder.jpg'">
+      <img src="${imagePath}" alt="${item.name}" class="w-full aspect-video object-cover rounded mb-3">
       <h4 class="text-lg font-semibold text-gray-800">${item.name}</h4>
       <p class="text-gray-600 mb-2">$${item.price.toFixed(2)}</p>
       <button onclick='addToCart("${item.name}", ${item.price})' class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-200 ease-in-out">
