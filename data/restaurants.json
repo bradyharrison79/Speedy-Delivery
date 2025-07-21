@@ -4,43 +4,19 @@
     "name": "Taco Bell",
     "category": "Mexican",
     "items": [
-      {
-        "name": "Crunchwrap Supreme",
-        "price": 4.99,
-        "image": "https://example.com/crunchwrap.jpg"
-      },
-      {
-        "name": "Quesarito",
-        "price": 3.49,
-        "image": "https://example.com/quesarito.jpg"
-      },
-      {
-        "name": "Nacho Fries",
-        "price": 2.99,
-        "image": "https://example.com/nachofries.jpg"
-      }
+      { "name": "Crunchwrap Supreme", "price": 4.99, "image": "images/tacobell/crunchwrap_supreme.jpg" },
+      { "name": "Quesarito", "price": 3.49, "image": "images/tacobell/quesarito.jpg" },
+      { "name": "Nacho Fries", "price": 2.99, "image": "images/tacobell/nacho_fries.jpg" }
     ]
   },
   {
-    "id": "domino'spizza",
+    "id": "dominospizza",
     "name": "Domino's Pizza",
     "category": "Pizza",
     "items": [
-      {
-        "name": "Pepperoni Pizza",
-        "price": 9.99,
-        "image": "https://example.com/pepperoni.jpg"
-      },
-      {
-        "name": "Cheese Bread",
-        "price": 4.99,
-        "image": "https://example.com/cheesebread.jpg"
-      },
-      {
-        "name": "Coke",
-        "price": 1.99,
-        "image": "https://example.com/coke.jpg"
-      }
+      { "name": "Pepperoni Pizza", "price": 9.99, "image": "images/dominospizza/pepperoni_pizza.jpg" },
+      { "name": "Cheese Bread", "price": 4.99, "image": "images/dominospizza/cheese_bread.jpg" },
+      { "name": "Coke", "price": 1.99, "image": "images/dominospizza/coke.jpg" }
     ]
   },
   {
@@ -48,43 +24,19 @@
     "name": "Panera Bread",
     "category": "Healthy",
     "items": [
-      {
-        "name": "Broccoli Cheddar Soup",
-        "price": 5.49,
-        "image": "https://example.com/broccoli.jpg"
-      },
-      {
-        "name": "Caesar Salad",
-        "price": 6.99,
-        "image": "https://example.com/salad.jpg"
-      },
-      {
-        "name": "Turkey Sandwich",
-        "price": 7.99,
-        "image": "https://example.com/turkey.jpg"
-      }
+      { "name": "Broccoli Cheddar Soup", "price": 5.49, "image": "images/panerabread/broccoli_cheddar_soup.jpg" },
+      { "name": "Caesar Salad", "price": 6.99, "image": "images/panerabread/caesar_salad.jpg" },
+      { "name": "Turkey Sandwich", "price": 7.99, "image": "images/panerabread/turkey_sandwich.jpg" }
     ]
   },
   {
-    "id": "hardee's",
+    "id": "hardees",
     "name": "Hardee's",
     "category": "Fast Food",
     "items": [
-      {
-        "name": "Thickburger",
-        "price": 6.49,
-        "image": "https://example.com/thickburger.jpg"
-      },
-      {
-        "name": "Fries",
-        "price": 2.29,
-        "image": "https://example.com/fries.jpg"
-      },
-      {
-        "name": "Iced Tea",
-        "price": 1.49,
-        "image": "https://example.com/icedtea.jpg"
-      }
+      { "name": "Thickburger", "price": 6.49, "image": "images/hardees/thickburger.jpg" },
+      { "name": "Fries", "price": 2.29, "image": "images/hardees/fries.jpg" },
+      { "name": "Iced Tea", "price": 1.49, "image": "images/hardees/iced_tea.jpg" }
     ]
   },
   {
@@ -92,21 +44,9 @@
     "name": "Subway",
     "category": "Healthy",
     "items": [
-      {
-        "name": "Veggie Delight",
-        "price": 5.29,
-        "image": "https://example.com/veggie.jpg"
-      },
-      {
-        "name": "Turkey Sub",
-        "price": 6.99,
-        "image": "https://example.com/turkeysub.jpg"
-      },
-      {
-        "name": "Cookie",
-        "price": 0.99,
-        "image": "https://example.com/cookie.jpg"
-      }
+      { "name": "Veggie Delight", "price": 5.29, "image": "images/subway/veggie_delight.jpg" },
+      { "name": "Turkey Sub", "price": 6.99, "image": "images/subway/turkey_sub.jpg" },
+      { "name": "Cookie", "price": 0.99, "image": "images/subway/cookie.jpg" }
     ]
   },
   {
@@ -114,43 +54,19 @@
     "name": "Chipotle",
     "category": "Mexican",
     "items": [
-      {
-        "name": "Chicken Burrito",
-        "price": 8.49,
-        "image": "https://example.com/burrito.jpg"
-      },
-      {
-        "name": "Chips and Guac",
-        "price": 3.29,
-        "image": "https://example.com/guac.jpg"
-      },
-      {
-        "name": "Soda",
-        "price": 1.99,
-        "image": "https://example.com/soda.jpg"
-      }
+      { "name": "Chicken Burrito", "price": 8.49, "image": "images/chipotle/chicken_burrito.jpg" },
+      { "name": "Chips and Guac", "price": 3.29, "image": "images/chipotle/chips_and_guac.jpg" },
+      { "name": "Soda", "price": 1.99, "image": "images/chipotle/soda.jpg" }
     ]
   },
   {
-    "id": "mcdonald's",
+    "id": "mcdonalds",
     "name": "McDonald's",
     "category": "Fast Food",
     "items": [
-      {
-        "name": "Big Mac",
-        "price": 5.99,
-        "image": "https://example.com/bigmac.jpg"
-      },
-      {
-        "name": "McNuggets",
-        "price": 4.49,
-        "image": "https://example.com/nuggets.jpg"
-      },
-      {
-        "name": "Apple Pie",
-        "price": 1.29,
-        "image": "https://example.com/applepie.jpg"
-      }
+      { "name": "Big Mac", "price": 5.99, "image": "images/mcdonalds/big_mac.jpg" },
+      { "name": "McNuggets", "price": 4.49, "image": "images/mcdonalds/mcnuggets.jpg" },
+      { "name": "Apple Pie", "price": 1.29, "image": "images/mcdonalds/apple_pie.jpg" }
     ]
   },
   {
@@ -158,21 +74,9 @@
     "name": "Pizza Hut",
     "category": "Pizza",
     "items": [
-      {
-        "name": "Meat Lover's Pizza",
-        "price": 11.49,
-        "image": "https://example.com/meatlovers.jpg"
-      },
-      {
-        "name": "Stuffed Crust Pizza",
-        "price": 12.99,
-        "image": "https://example.com/stuffed.jpg"
-      },
-      {
-        "name": "Breadsticks",
-        "price": 3.99,
-        "image": "https://example.com/breadsticks.jpg"
-      }
+      { "name": "Meat Lover's Pizza", "price": 11.49, "image": "images/pizzahut/meat_lovers_pizza.jpg" },
+      { "name": "Stuffed Crust Pizza", "price": 12.99, "image": "images/pizzahut/stuffed_crust_pizza.jpg" },
+      { "name": "Breadsticks", "price": 3.99, "image": "images/pizzahut/breadsticks.jpg" }
     ]
   },
   {
@@ -180,21 +84,9 @@
     "name": "KFC",
     "category": "Fast Food",
     "items": [
-      {
-        "name": "Fried Chicken Bucket",
-        "price": 9.99,
-        "image": "https://example.com/bucket.jpg"
-      },
-      {
-        "name": "Mashed Potatoes",
-        "price": 2.49,
-        "image": "https://example.com/mashed.jpg"
-      },
-      {
-        "name": "Biscuits",
-        "price": 1.49,
-        "image": "https://example.com/biscuits.jpg"
-      }
+      { "name": "Fried Chicken Bucket", "price": 9.99, "image": "images/kfc/fried_chicken_bucket.jpg" },
+      { "name": "Mashed Potatoes", "price": 2.49, "image": "images/kfc/mashed_potatoes.jpg" },
+      { "name": "Biscuits", "price": 1.49, "image": "images/kfc/biscuits.jpg" }
     ]
   },
   {
@@ -202,21 +94,9 @@
     "name": "Sweetgreen",
     "category": "Healthy",
     "items": [
-      {
-        "name": "Kale Caesar",
-        "price": 9.99,
-        "image": "https://example.com/kale.jpg"
-      },
-      {
-        "name": "Harvest Bowl",
-        "price": 10.49,
-        "image": "https://example.com/harvest.jpg"
-      },
-      {
-        "name": "Spindrift",
-        "price": 2.99,
-        "image": "https://example.com/spindrift.jpg"
-      }
+      { "name": "Kale Caesar", "price": 9.99, "image": "images/sweetgreen/kale_caesar.jpg" },
+      { "name": "Harvest Bowl", "price": 10.49, "image": "images/sweetgreen/harvest_bowl.jpg" },
+      { "name": "Spindrift", "price": 2.99, "image": "images/sweetgreen/spindrift.jpg" }
     ]
   }
 ]

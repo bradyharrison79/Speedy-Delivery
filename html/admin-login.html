@@ -1,0 +1,47 @@
+<!-- admin-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="max-w-md mx-auto p-6 bg-white rounded shadow mt-10">
+    <h1 class="text-2xl font-bold mb-6 text-center">Admin Login</h1>
+    <form id="admin-login-form" class="space-y-4">
+      <input id="admin-username" type="text" placeholder="Username" required class="w-full p-3 border rounded" />
+      <input id="admin-password" type="password" placeholder="Password" required class="w-full p-3 border rounded" />
+
+      <button type="submit" class="w-full bg-blue-600 hover:bg-black text-white p-3 rounded">
+        Log In
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-10"></div>
+
+  <!-- JS to Load Components -->
+  
+  <script src="../js/cart-badge.js"></script>
+  
+  <script>
+    fetch('../components/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+
+</html>

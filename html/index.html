@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speedy Delivery - Home</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Choose Your Favorite Restaurant</h1>
+
+    <!-- Search Box -->
+    <div class="mb-6">
+      <input
+        id="search"
+        type="text"
+        oninput="filterRestaurants()"
+        placeholder="Search restaurants..."
+        class="p-3 border border-gray-300 rounded w-full"
+      />
+    </div>
+
+    <!-- Restaurant List -->
+    <div id="restaurant-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      Loading restaurants...
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-10"></div>
+
+  <!-- Scripts -->
+  <script src="../js/main.js" defer></script>
+  <script src="../js/restaurant.js" defer></script>
+  <script src="../js/cart-badge.js"></script>
+ `  <script>
+    fetch('../components/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+  
+</body>
+</html>

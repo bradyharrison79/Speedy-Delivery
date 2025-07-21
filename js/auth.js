@@ -1,49 +1,93 @@
-// auth.js
+// js/auth.js
 
-// Sign up logic
-const signupForm = document.getElementById('signupForm');
-if (signupForm) {
-  signupForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const username = document.getElementById('username').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
+document.addEventListener("DOMContentLoaded", () => {
+  const signupForm = document.getElementById("signup-form");
+  const loginForm = document.getElementById("login-form");
+  const adminSignupForm = document.getElementById("admin-signup-form");
+  const adminLoginForm = document.getElementById("admin-login-form");
 
-    if (!username || !email || !password) return alert('All fields required');
+  // USER SIGNUP
+  if (signupForm) {
+    signupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
 
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    if (users.some(u => u.username === username)) {
-      return alert('Username already exists!');
-    }
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      if (users.find(user => user.email === email)) {
+        alert("Email already registered.");
+        return;
+      }
 
-    users.push({ username, email, password });
-    localStorage.setItem('users', JSON.stringify(users));
-    localStorage.setItem('currentUser', JSON.stringify({ username }));
-    alert('Account created! You are now logged in.');
-    window.location.href = 'index.html';
-  });
-}
+      users.push({ email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Signup successful. Please login.");
+      window.location.href = "login.html";
+    });
+  }
 
-// Login logic
-const loginForm = document.getElementById('loginForm');
-if (loginForm) {
-  loginForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
+  // USER LOGIN
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
 
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    const user = users.find(u => u.username === username && u.password === password);
-    if (!user) return alert('Invalid username or password.');
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      const user = users.find(user => user.email === email && user.password === password);
 
-    localStorage.setItem('currentUser', JSON.stringify({ username }));
-    alert('Login successful!');
-    window.location.href = 'index.html';
-  });
-}
+      if (!user) {
+        alert("Invalid credentials.");
+        return;
+      }
 
-// Log out function (can be used anywhere)
-function logout() {
-  localStorage.removeItem('currentUser');
-  window.location.href = 'login.html';
-}
+      localStorage.setItem("currentUser", email); // ✅ CORRECTED KEY
+      alert("Login successful.");
+      window.location.href = "index.html";
+    });
+  }
+
+  // ADMIN SIGNUP
+  if (adminSignupForm) {
+    adminSignupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("admin-signup-email").value;
+      const password = document.getElementById("admin-signup-password").value;
+
+      const admins = JSON.parse(localStorage.getItem("admins") || "[]");
+      if (admins.find(admin => admin.email === email)) {
+        alert("Admin already exists.");
+        return;
+      }
+
+      admins.push({ email, password });
+      localStorage.setItem("admins", JSON.stringify(admins));
+      alert("Admin account created. Please log in.");
+      window.location.href = "admin-login.html";
+    });
+  }
+
+  // ADMIN LOGIN
+  if (adminLoginForm) {
+    adminLoginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("admin-login-email").value;
+      const password = document.getElementById("admin-login-password").value;
+
+      const admins = JSON.parse(localStorage.getItem("admins") || "[]");
+      const admin = admins.find(admin => admin.email === email && admin.password === password);
+
+      if (!admin) {
+        alert("Invalid admin credentials.");
+        return;
+      }
+
+      localStorage.setItem("loggedInAdmin", email); // ✅ KEEP THIS FOR ADMIN ONLY
+      alert("Admin login successful.");
+      window.location.href = "admin-dashboard.html";
+    });
+  }
+});
+
+
+

@@ -1,21 +1,20 @@
-// js/cart-badge.js
-
-function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+document.addEventListener("DOMContentLoaded", () => {
+  function updateCartCount() {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     const badge = document.getElementById('cart-count');
-    if (badge) {
-      badge.textContent = cart.length;
-      badge.style.display = cart.length > 0 ? 'inline-block' : 'none';
-    }
+    if (!loggedInUser || !badge) return;
+    const cartKey = `cart_${loggedInUser.email}`;
+    const cart = JSON.parse(localStorage.getItem(cartKey) || '[]');
+    badge.textContent = cart.length;
   }
-  
-  // Update immediately on page load
-  updateCartCount();
-  
-  // Listen for cart changes from other tabs/windows
+
+  setTimeout(updateCartCount, 100);
+
   window.addEventListener('storage', (e) => {
-    if (e.key === 'cart') {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const cartKey = `cart_${loggedInUser?.email}`;
+    if (e.key === cartKey) {
       updateCartCount();
     }
   });
-  
+});

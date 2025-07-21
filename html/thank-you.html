@@ -1,0 +1,37 @@
+<!-- thank-you.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="max-w-xl mx-auto p-10 text-center">
+    <h1 class="text-3xl font-bold text-green-600 mb-4">Thank You for Your Order!</h1>
+    <p class="text-lg mb-6">Your delicious meal is on its way. We'll notify you once it's out for delivery.</p>
+    <a href="../html/index.html" class="inline-block bg-blue-600 hover:bg-black text-white px-6 py-3 rounded text-lg">Return Home</a>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-10"></div>
+
+  <script src="../js/cart-badge.js"></script>
+  
+  <!-- Scripts -->
+  <script>
+    fetch('../components/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+// index.js
+
 function renderRestaurantCard(restaurant) {
   const container = document.getElementById('restaurant-list');
   const div = document.createElement('div');
@@ -10,7 +12,7 @@ function renderRestaurantCard(restaurant) {
     <img src="${image}" alt="${restaurant.name}" class="w-full h-40 object-cover rounded mb-2">
     <h3 class="text-lg font-semibold">${restaurant.name}</h3>
     <p class="text-sm text-gray-600">${cuisine}</p>
-    <a href="restaurant.html?id=${restaurant.id}" class="text-blue-500 hover:underline mt-2 block">View Menu</a>
+    <a href="restaurant-menu.html?id=${restaurant.id}" class="text-blue-500 hover:underline mt-2 block">View Menu</a>
   `;
 
   container.appendChild(div);
@@ -42,3 +44,4 @@ fetch(window.location.origin + '/data/restaurants.json')
     // Optional: save to localStorage
     localStorage.setItem('restaurants', JSON.stringify(data));
   });
+

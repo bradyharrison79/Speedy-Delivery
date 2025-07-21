@@ -1,0 +1,41 @@
+<!-- /html/restaurant-menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar Placeholder -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 id="restaurant-name" class="text-2xl font-bold mb-6">Loading...</h1>
+    <div id="menu-items" class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <!-- Menu items injected by JS -->
+    </div>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer" class="mt-10"></div>
+
+  <!-- Scripts -->
+  <script src="../js/restaurant-menu.js" defer></script>
+  <script src="../js/cart-badge.js"></script>
+  
+  <script>
+    fetch('../components/navbar.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('navbar').innerHTML = html);
+
+    fetch('../components/footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+</body>
+</html>
+
+

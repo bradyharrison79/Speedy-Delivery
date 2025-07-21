@@ -1,41 +1,46 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("checkout-form");
+// js/checkout.js
 
-  form.addEventListener("submit", (e) => {
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('checkout-form');
+
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = form[0].value.trim();
-    const address = form[1].value.trim();
-    const city = form[2].value.trim();
-    const card = form[3].value.trim();
+    const name = document.getElementById('name')?.value.trim();
+    const email = document.getElementById('email')?.value.trim();
+    const address = document.getElementById('address')?.value.trim();
+    const message = document.getElementById('message')?.value.trim(); // Optional field
+    const currentUser = localStorage.getItem("currentUser");
 
-    if (!name || !address || !city || !card) {
-      alert("Please fill in all fields.");
+    if (!currentUser) {
+      alert("You must be logged in to place an order.");
       return;
     }
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cart.length === 0) {
-      alert("Your cart is empty.");
+    const cartKey = `cart_${currentUser}`;
+    const ordersKey = `orders_${currentUser}`;
+    const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+    if (!name || !email || !address || cart.length === 0) {
+      alert('Please fill in all fields and make sure your cart is not empty.');
       return;
     }
 
     const order = {
       name,
+      email,
       address,
-      city,
+      message: message || '',
       items: cart,
       timestamp: new Date().toISOString()
     };
 
-    const orders = JSON.parse(localStorage.getItem("orders")) || [];
-    orders.push(order);
-    localStorage.setItem("orders", JSON.stringify(orders));
-    localStorage.removeItem("cart");
+    const existingOrders = JSON.parse(localStorage.getItem(ordersKey)) || [];
+    existingOrders.push(order);
+    localStorage.setItem(ordersKey, JSON.stringify(existingOrders));
+    localStorage.removeItem(cartKey);
 
-    alert("Order placed successfully!");
-    window.location.href = "my-orders.html";
+    alert('Order placed successfully!');
+    window.location.href = 'my-orders.html';
   });
 });
-
-
